@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">FamilyGo</string>
+
+
+    <!-- Strings Values -->
+    <string name="login">Login</string>
+    <string name="sign_up"><u>Sign up</u></string>
+    <string name="signUp">Sign up</string>
+    <string name="forget_password" translatable="false"><u>Forget Password</u></string>
+    <string name="password">Password</string>
+    <string name="email_address">email address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="error_text">Error text</string>
+    <string name="pass_req">Password is Required!</string>
+    <string name="email_req">Email Address is Required</string>
+    <string name="email_not_valid">Enter Valid Email Address!</string>
+    <string name="pass_length">Password Must be 6 or More digits</string>
+    <string name="passwords_matching">Passwords does not matches</string>
+    <string name="login_with_phone_number">Login with Phone Number</string>
+    <string name="choose_country_code">Choose country code and enter your\nphone number to login</string>
+    <string name="loginWithEmail"><u>Login With Email</u></string>
+    <string name="enter_the_code">Enter the code</string>
+    <string name="we_have_sent">We have sent you an code for \n phone number verification</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="verify">Verify</string>
+    <string name="resend_code"><u>Resend Code!</u></string>
+    <string name="next"><u>Next</u></string>
+    <string name="profile_appearance">this is how you\'ll appear on your map</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="join_or_create_circle">Join or Create Circle</string>
+    <string name="create_circle_invite_family">Create a new Circle \nand invite your family by code</string>
+    <string name="circle_code">Circle Code</string>
+    <string name="join_circle">Join Circle</string>
+    <string name="create_circle">Create Circle</string>
+    <string name="code_length">Circle Code must be 6 digits</string>
+    <string name="sure_joining_new_circle">Are you sure:\n Note that, you will leave old circle if you have!</string>
+    <string name="done"><u>Done</u></string>
+    <string name="share_your_code_out">Share your code out load or \nsend it in message</string>
+    <string name="dummy_circle_code">XXX - XXX</string>
+    <string name="share_your_code">Share your code</string>
+    <string name="share_code_btn">Share Code</string>
+    <string name="or_click_to_log_out"><u>click to log out</u></string>
+    <string name="verify_message">Your Email Address is Not Verified yet!,\n you cannot use the app with out verifying your identity.
+    \nClick on send verification Email to verify your email.</string>
+    <string name="confirm">confirmed</string>
+    <string name="we_sent_you_verification_email">We Sent you verification email, Please verify your email and click on Confirm Button bellow</string>
+    <string name="verify_email_address">Verify Email Address</string>
+    <string name="title_location_permission">Location Required</string>
+    <string name="text_location_permission">the location permission is required to set your location ot the map to let your family see you!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="location_sharing">Location Sharing</string>
+    <string name="share_location">Share Location</string>
+    <string name="change_account_password">Change Account Password</string>
+    <string name="enter_old_password">Enter old password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="verify_new_password">verify new password</string>
+    <string name="change_password">Change Password</string>
+    <string name="admin_permission_desc">You can set any circle member as the admin of the circle
+        note that the circle include only one circle admin, so if you set new
+        admin you will no longer be an admin.</string>
+    <string name="admin_permission_desc_connectivity">You can set any circle member as the admin of the circle
+        note that the circle include only one circle admin, so if you set new
+        admin you will no longer be an admin.\n\n\nNo Internet Connection, Try Again Later!</string>
+    <string name="change_permissions">Change Permissions</string>
+    <string name="user">User</string>
+    <string name="member">Member</string>
+    <string name="circle_members">Circle Members</string>
+    <string name="admin">Admin</string>
+    <string name="circle_accessibility">Turn off Circle Accessibility and no more users can join to the circle</string>
+    <string name="delete_circle_member">Delete Circle Member</string>
+    <string name="you_can_delete_circle_member">You can delete circle Member, not that this action cannot be undo</string>
+    <string name="you_can_delete_circle_member_connectivity">You can delete circle Member, not that this action cannot be undo.
+        \n\n\nNo Internet Connection, Try Again Later!</string>
+    <string name="circle_accessbility">Circle Accessbility</string>
+    <string name="circle_chat">Circle Chat</string>
+    <string name="aa">Aa…</string>
+    <string name="share_your_circle">Share Your Circle</string>
+    <string name="profile_setup">Profile Setup</string>
+    <string name="add_photo">📷 Add Photo</string>
+    <string name="user_name">user name</string>
+    <string name="this_is_how_you_ll_appear_on_your_map">this is how you\'ll appear on your map</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="circle_settings">Circle Settings</string>
+    <string name="change_circle">Change Circle</string>
+    <string name="leave_circle">Leave Circle</string>
+    <string name="admin_permissions">Admin Permissions</string>
+    <string name="switch_permissions_to_other_member">Switch Permissions to other Member</string>
+    <string name="change_circle_settings">Change Circle Settings</string>
+    <string name="other_settings">Other Settings</string>
+    <string name="reload_the_map">Reload The Map</string>
+    <string name="sign_out">Sign Out</string>
+</resources>
