@@ -3,6 +3,7 @@ package com.mh.jwaer.familygo.ui.circle;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ import com.mh.jwaer.familygo.R;
 import com.mh.jwaer.familygo.data.models.ErrorResponse;
 import com.mh.jwaer.familygo.data.models.ResponseBody;
 import com.mh.jwaer.familygo.databinding.FragmentCircleSetupBinding;
+import com.mh.jwaer.familygo.ui.home.LoadingActivity;
 import com.mh.jwaer.familygo.util.LoadingDialog;
 
 public class CircleSetupFragment extends Fragment {
@@ -102,7 +104,8 @@ public class CircleSetupFragment extends Fragment {
             public void onChanged(ResponseBody responseBody) {
                 loadingDialog.dissmissDialog();
                 if (responseBody.isSuccessfull()){
-                    navController.navigate(R.id.action_circleSetupFragment_to_mainActivity);
+                    startActivity(new Intent(requireActivity(), LoadingActivity.class));
+                    requireActivity().finish();
                 }
                 else
                     Toast.makeText(getContext(), "Error Joining Circle", Toast.LENGTH_SHORT).show();
@@ -113,7 +116,10 @@ public class CircleSetupFragment extends Fragment {
             public void onChanged(ResponseBody responseBody) {
                 loadingDialog.dissmissDialog();
                 if (responseBody.isSuccessfull()){
-                    navController.navigate(R.id.action_circleSetupFragment_to_createCircleFragment);
+
+                    CircleSetupFragmentDirections.ActionCircleSetupFragmentToCreateCircleFragment action = CircleSetupFragmentDirections.actionCircleSetupFragmentToCreateCircleFragment();
+                    action.setCircleCode(responseBody.getMessage());
+                    navController.navigate(action);
                 }
                 else
                     Toast.makeText(getContext(), "Error Creating a Circle", Toast.LENGTH_SHORT).show();

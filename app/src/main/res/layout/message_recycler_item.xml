@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userCircleImageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/add_profile_image" />
+
+        <TextView
+            android:id="@+id/messageBodyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="86dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_gray_background"
+            android:padding="8dp"
+            android:text="this is the message content"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/timestampTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageBodyTv"
+            android:layout_marginStart="86dp"
+            android:layout_marginTop="2dp"
+            android:text="12:00" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

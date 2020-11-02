@@ -1,6 +1,7 @@
 package com.mh.jwaer.familygo.ui.auth;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ import com.mh.jwaer.familygo.data.models.AuthModel;
 import com.mh.jwaer.familygo.data.models.AuthResponse;
 import com.mh.jwaer.familygo.data.models.ErrorResponse;
 import com.mh.jwaer.familygo.databinding.FragmentLoginBinding;
+import com.mh.jwaer.familygo.ui.home.LoadingActivity;
 import com.mh.jwaer.familygo.util.LoadingDialog;
 
 public class LoginFragment extends Fragment {
@@ -92,7 +94,8 @@ public class LoginFragment extends Fragment {
             public void onChanged(AuthResponse authResponse) {
                 loadingDialog.dissmissDialog();
                 if (authResponse != null){
-                    navController.navigate(R.id.action_loginFragment_to_mainActivity);
+//                    navController.navigate(R.id.action_loginFragment_to_mainActivity);
+                    startActivity(new Intent(requireActivity(), LoadingActivity.class));
                     requireActivity().finish();
                 }
             }

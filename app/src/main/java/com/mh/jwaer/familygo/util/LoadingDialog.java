@@ -15,7 +15,7 @@ public class LoadingDialog {
     public void startAlertDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setView(R.layout.custom_loading_dialog);
-        builder.setCancelable(false);
+        builder.setCancelable(true);
         dialog = builder.create();
         dialog.show();
     }

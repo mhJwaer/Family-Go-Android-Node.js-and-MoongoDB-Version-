@@ -153,8 +153,8 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onChanged(ResponseBody responseBody) {
                 loadingDialog.dissmissDialog();
-                navController.navigate(R.id.action_profileFragment_to_circleSetupFragment);
-                Toast.makeText(getContext(), responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+                if (navController.getCurrentDestination().getId() == R.id.profileFragment)
+                    navController.navigate(R.id.action_profileFragment_to_circleSetupFragment);
             }
         });
 

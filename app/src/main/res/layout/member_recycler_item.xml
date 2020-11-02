@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="15dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/memberRecycler_userImage"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="18dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_profile_image" />
+
+    <TextView
+        android:id="@+id/memberRecycler_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="99dp"
+        android:text="@string/user_name"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/memberRecycler_userState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="99dp"
+        android:textSize="12sp" />
+
+</androidx.cardview.widget.CardView>

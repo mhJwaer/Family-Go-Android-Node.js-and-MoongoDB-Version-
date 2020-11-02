@@ -4,18 +4,23 @@ import android.util.Log;
 
 import com.mh.jwaer.familygo.data.models.AuthModel;
 import com.mh.jwaer.familygo.data.models.AuthResponse;
+import com.mh.jwaer.familygo.data.models.CircleMember;
+import com.mh.jwaer.familygo.data.models.LogoutModel;
 import com.mh.jwaer.familygo.data.models.ResponseBody;
+import com.mh.jwaer.familygo.data.models.UpdateLocationModel;
+import com.mh.jwaer.familygo.data.models.UserLocationModel;
+import com.mh.jwaer.familygo.data.models.UserModel;
 import com.mh.jwaer.familygo.util.CONSTANTS;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.Interceptor;
 import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -24,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private static final String TAG = "RetrofitClient";
-    private static final String BASE_URL = "http://192.168.100.100:3000/";
+    public static final String BASE_URL = "http://192.168.100.100:3000/";
 
 
     private static RetrofitClient instance;
@@ -111,5 +116,40 @@ public class RetrofitClient {
 
     public  Call<ResponseBody> createCircle(){
         return getNetworkApi().createCircle();
+    }
+
+    public Call<UserModel> getUserDetails(){
+        return getNetworkApi().getUserDetails();
+    }
+
+    public Call<ResponseBody> updateUserLocation(UpdateLocationModel location){
+        return getNetworkApi().updateUserLocation(location);
+    }
+
+    public Call<List<CircleMember>> getCircleMembers(){
+        return getNetworkApi().getCircleMembers();
+    }
+
+    public Call<List<UserLocationModel>> getCircleMembersLocations(){
+        return getNetworkApi().getCircleMembersLocations();
+    }
+
+    public Call<ResponseBody> changeCircleAdmin(String targetUserId){
+        return getNetworkApi().changeCircleMember(targetUserId);
+    }
+
+    public  Call<ResponseBody> leaveCircle(){
+        return getNetworkApi().leaveCircle();
+    }
+
+    public Call<ResponseBody> changeCircleAccessibility(Boolean accessFlag){
+        return getNetworkApi().changeCircleAccessibility(accessFlag);
+    }
+    public Call<ResponseBody> deleteCircleMember(String targetUserId){
+        return getNetworkApi().deleteCircleMember(targetUserId);
+    }
+
+    public Call<Void>logout(LogoutModel logoutModel){
+        return getNetworkApi().logout(logoutModel);
     }
 }

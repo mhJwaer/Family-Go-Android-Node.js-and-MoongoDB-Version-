@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 public class SharedPreferencesHelper {
-    public static final String FILE_NAME = "APP_PREFERENCES";
+    public static final String FILE_NAME = "FamilyGoPreferences";
 
     public static void put(Context context, String key, Object object) {
 

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/expand_toolbar_image"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:expandedTitleMarginEnd="64dp"
+                    app:expandedTitleMarginStart="48dp"
+                    app:layout_scrollFlags="exitUntilCollapsed|scroll"
+                    app:title="Settings">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="65dp"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:padding="2dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/account_settings"
+                        android:textColor="#B5B5B5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/personal_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileCircleImage"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:src="@drawable/add_profile_image"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/profileUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="106dp"
+                            android:text="@string/user_name"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_shareLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_location_sharing"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/location_sharing"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_changePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_password_lock"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/change_account_password"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:padding="2dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/circle_settings"
+                        android:textColor="#B5B5B5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_circleMembers"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_circle_members"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/circle_members"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_changeCircle"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_change_circle"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/change_circle"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_shareCircle"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_share_circle"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/circle_code"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_leaveCircle"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_leave_circle"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/leave_circle"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:padding="2dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/admin_permissions"
+                        android:textColor="#B5B5B5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_switchPermissions"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_admin_permissions"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/switch_permissions_to_other_member"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_changeCircleSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_change_circle"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/change_circle_settings"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_deleteCircleMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_delete_circle_member"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/delete_circle_member"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#E9E9E9"
+                        android:padding="2dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/other_settings"
+                        android:textColor="#B5B5B5" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_reloadMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_relaod"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/reload_the_map"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_logOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#fff"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="32dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_leave_circle"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="72dp"
+                            android:text="@string/sign_out"
+                            android:textColor="#515151"
+                            android:textSize="18sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <FrameLayout
+            android:id="@+id/childFragmentContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/coordinatorLayout2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

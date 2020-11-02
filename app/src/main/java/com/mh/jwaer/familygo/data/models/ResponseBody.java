@@ -11,6 +11,11 @@ public class ResponseBody {
     @Expose
     private String message;
 
+    public ResponseBody(Boolean isSuccessfull, String message) {
+        this.isSuccessfull = isSuccessfull;
+        this.message = message;
+    }
+
     public Boolean isSuccessfull() {
         return isSuccessfull;
     }

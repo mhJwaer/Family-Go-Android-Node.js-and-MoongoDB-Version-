@@ -1,9 +1,6 @@
 package com.mh.jwaer.familygo.ui.auth;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -21,8 +18,8 @@ import com.mh.jwaer.familygo.util.SharedPreferencesHelper;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.util.Objects;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -38,7 +35,6 @@ import static com.mh.jwaer.familygo.util.CONSTANTS.SHARED_REFRESH_TOKEN;
 public class AuthViewModel extends ViewModel {
 
 
-    private static final String TAG = "AuthViewModel";
     private MutableLiveData<AuthResponse> authResponse = new MutableLiveData<>();
     private MutableLiveData<ErrorResponse> errorResponse = new MutableLiveData<>();
     private MutableLiveData<ResponseBody> updateUserNameRes = new MutableLiveData<>();
@@ -128,7 +124,7 @@ public class AuthViewModel extends ViewModel {
 
     public void uploadProfileImage(Uri imageUri) {
 
-        File file = new File(imageUri.getPath());
+        File file = new File(Objects.requireNonNull(imageUri.getPath()));
 
         RequestBody body = RequestBody.create(file, MediaType.parse("image/*"));
 
